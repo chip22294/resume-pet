@@ -1,0 +1,21 @@
+{{!-- 
+name: 'Project Alpha',
+description: 'Developing new software platform',
+status: 'In Progress',
+technologies: [ 
+--}}
+<h5>
+    {{#if status}}
+        {{name}} ({{status}})<br>
+    {{else}}
+        {{name}}<br>
+    {{/if}}
+    <em><small>{{description}}</small></em>
+    {{#if technologies}}
+        <br><em>(
+        {{#each technologies}}
+            {{this}}&nbsp;
+        {{/each}}
+        )</em>
+    {{/if}}
+</h5>
