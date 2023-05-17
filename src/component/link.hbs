@@ -1,0 +1,9 @@
+{{!-- href blank text line woLine --}}
+<a href="{{href}}" {{#if blank}}target="_blank"{{/if}}>{{text}}</a>
+{{#unless woLine}}
+    {{#if line}}
+        ➖
+    {{else}}
+        🔘
+    {{/if}}
+{{/unless}}

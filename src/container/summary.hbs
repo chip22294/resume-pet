@@ -1,0 +1,24 @@
+<div>
+	{{#with main}}
+    <main>
+        <section>
+            {{!-- {{> title data=summary.title}} --}}
+            {{> title name=summary.title big=true}}
+            <div>
+                <p>
+                    {{summary.text}}
+                </p>
+            </div>
+        </section>
+
+        <section>
+            {{> title name=otherexp.title}}
+            <div>
+                <p>
+                    {{otherexp.text}}
+                </p>
+            </div>
+        </section>
+    </main>
+	{{/with}}
+</div>

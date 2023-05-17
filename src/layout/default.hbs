@@ -1,0 +1,48 @@
+{{!-- 
+  Це леяут по замовчюванню, котрий вже містить базову структуру HTML документа
+  І котрий обгортає код container файлів для будь-яких ендпоїнтів
+--}}
+<!DOCTYPE html>
+<html>
+
+  <head>
+    {{#if page.title.name}}
+      <title>{{page.title.name}}</title>
+    {{else}}
+      <title>Untitled page</title>
+    {{/if}}
+    <meta charset='utf-8' />
+    <link href='css/index.css' rel='stylesheet' />
+  </head>
+
+  <body>
+	{{#with header}}
+    <header>
+        <div>
+            <h1>{{name.firstname}} {{name.lastname}} | Resume</h1>
+        </div>
+        <div>
+            <b>{{position}}</b>
+        </div>
+        <br>
+        <div>
+            <em>{{sallary}}</em>
+        </div>
+		<br>
+		<div>
+			<address>{{address}}</address>
+		</div>
+        <br>
+        <hr> 
+    </header>
+	{{/with}}
+
+    {{> nav}}
+
+    {{{body}}}
+
+    {{> footer}}
+	
+  </body>
+
+</html>
