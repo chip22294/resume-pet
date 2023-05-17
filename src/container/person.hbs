@@ -1,60 +1,94 @@
+{{#with person}}
 <div>
-	{{#with main}}
-    <main>
-        <section>
-            {{> title name="Work history" big=true}}
-            <div>
-                <ul>
-                    {{#each works}}
-                        <li>
-                            <div>{{position}}</div>
-                            <br>
-                            <div>{{duration.from}} - {{#if duration.to}}{{duration.to}} {{else}} (still working){{/if}}</div>
-                            <br>
-                            <div>
-                                {{#if company.url}}
-                                    {{> link href=company.url text=company.name blank=true woLine=true}}
-                                {{else}}
-                                    <b>{{company.name}}</b>
-                                {{/if}}
-                            </div>
-                            <br>
-                            <br>
-                            <div><strong>Projects ({{projectAmount}})</strong></div>
-                            <br>
-                            <ul>
-                                {{#each projects}}
-                                <li>
-                                    <div>{{> link href=url text=name blank=true woLine=true}}</div>
-                                    <br>
-                                    <div><p>{{about}}</p></div>
-                                    <br>
-                                    <em>Project stacks ({{stackAmount}})</em>
-                                    <ul>
-                                        {{#each stacks}}
-                                        <li>
-                                            {{name}}
-                                        </li>
-                                        {{/each}}
-                                    </ul>
-                                    <br>
-                                    <em>Project awards:</em>
-                                    <ul>
-                                        {{#each awards}}
-                                        <li>
-                                            {{name}}
-                                        </li>
-                                        {{/each}}
-                                    </ul>
-                                </li>
-                                {{/each}}
-                            </ul>
-                        </li>
-                        <br>
-                    {{/each}}
-                </ul>
-            </div>
-        </section>
-    </main>
-	{{/with}}
+    <section>
+        {{> title name=name big=true}}
+        <div>
+            {{gender}} {{age}} y.o.
+        </div>
+        <div>
+            <address>
+                {{#with address}}
+                    {{street}} {{city}} {{state}} {{zip}} {{country}}
+                {{/with}}
+            </address>
+        </div>
+    </section>
 </div>
+<div>
+    <section>
+        {{> title name="Education"}}
+        <ul>
+        {{#each education}}
+            <li>
+            <b>{{degree}}</b> {{major}}
+            <br>
+            <em>
+                {{university}} ({{graduationYear}})
+            </em>
+            </li>
+        {{/each}}
+        </ul>
+    </section>
+</div>
+<div>
+    <section>
+        {{> title name="Work experience:"}}
+        {{#each workExperience}}
+        <h3>{{title}} ({{company}} <i>{{industry}} {{year_founded}}</i>)</h3>
+        <dl>
+            <dt><b>Responsibilities: ({{startDate}} - {{endDate}})</b></dt>
+            {{#each responsibilities}}
+                <dd>{{this}}</dd>
+            {{/each}}
+        </dl>
+        <hr>
+        <div>
+        {{> title name="Employees:"}}
+            {{#each employees}}
+                <h4>{{name}} ({{position}}, {{department}})</h4>                
+                <dl>
+                    <dt><h5>Projects:</h5></dt>
+                    {{#each projects}}
+                        <dd>
+                            {{> project}}
+                        </dd>
+                        <dl>
+                            <dt><h5>Teams:</h5></dt>
+                            {{#each teams}}
+                                <dd>
+                                    <h5>{{team_name}} ({{> member name=team_leader.name title=team_leader.title email=team_leader.email}})</h5>
+                                    <ul>
+                                    {{#each team_members}}
+                                        <li>
+                                            {{> member name=name title=title email=email skills=skills}}
+                                            <dl>
+                                                <dt><h5>Projects:</h5></dt>
+                                                {{#each projects}}
+                                                    <dd>
+                                                        {{> project}}
+                                                        <h5>Members:</h5>
+                                                        <ul>
+                                                        {{#each team_members}}
+                                                            <li>
+                                                                <h5>{{> member}}</h5>
+                                                            </li>
+                                                        {{/each}}
+                                                        </ul>
+                                                    </dd>
+                                                {{/each}}
+                                            </dl>
+                                        </li>
+                                    {{/each}}
+                                    </ul>
+                                </dd>
+                            {{/each}}
+                        </dl>
+                        
+                    {{/each}}
+                </dl>
+            {{/each}}
+        </div>
+        {{/each}}
+    </section>
+</div>
+{{/with}}

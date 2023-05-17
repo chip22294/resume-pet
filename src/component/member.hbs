@@ -1,0 +1,12 @@
+{{#if email}}
+    <a href="mailto:{{email}}">{{name}}</a> ({{title}})
+{{else}}
+    {{name}} ({{title}})
+{{/if}}
+{{#if skills}}
+    <br><em>(
+    {{#each skills}}
+        {{this}}&nbsp;
+    {{/each}}
+    )</em>
+{{/if}}

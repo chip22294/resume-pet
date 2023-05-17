@@ -261,6 +261,12 @@ router.get('/work', function (req, res) {
 
 router.get('/person', function (req, res) {
   res.render('person', {
+    layout: 'personpage',
+
+    page: {
+      title: { name: 'Person', big: true },
+    },
+
     person: {
       name: 'Emma Johnson',
       age: 32,
