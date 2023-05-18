@@ -384,13 +384,13 @@ router.get('/program', function (req, res) {
             type: 'Art',
             duration: 3,
             details: {
-                museum: {
-                  name: 'The Louvre',
-                  location: {
-                    address: 'Rue de Rivoli',
-                    city: 'Paris',
-                    country: 'France',
-                  },
+              museum: {
+                name: 'The Louvre',
+                location: {
+                  address: 'Rue de Rivoli',
+                  city: 'Paris',
+                  country: 'France',
+                },
                 exhibits: [
                   {
                     name: 'Mona Lisa',
@@ -453,7 +453,6 @@ router.get('/program', function (req, res) {
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
-
     layout: 'basic',
 
     page: {
