@@ -1,0 +1,13 @@
+{{!-- guide: {
+                name: 'Francois',
+                language: 'French',
+                rating: 4.8,
+              }, --}}
+<div>
+{{#with item}}
+    <b>Guide:</b> {{name}} <em>({{language}})</em>
+    <br>
+    <label for="rating">Rating:</label>
+    <progress id="rating" value="{{rating}}" max="5"></progress>
+{{/with}}
+</div>

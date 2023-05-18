@@ -1,0 +1,15 @@
+<div>
+    <dl>
+    <dt><b>Exhibits:</b></dt>
+    {{#each list}}
+        <dd>
+            {{#if audio_guide}}🔊&nbsp;{{/if}}
+            {{this.name}}
+            {{#if this.artist}}
+             - {{this.artist}}
+            {{/if}}
+            <em>({{this.description}})</em>
+        </dd>
+    {{/each}}
+    </dl>
+</div>
