@@ -1,0 +1,18 @@
+{{#with web}}
+    {{#each languages}}
+        <div>
+            {{> title name=name big=true}}
+            <u>Version: {{version}}</u><br>
+            <em>{{description}}</em>
+        </div>
+        <div>
+            {{#if elements}}
+                {{#each elements}}
+                    <div>
+                        {{> element name=name description=description}}
+                    </div>
+                {{/each}}
+            {{/if}}
+        </div>
+    {{/each}}
+{{/with}}
