@@ -1,1 +1,62 @@
-Boo
+{{> label title=name hsize=1 sheme="primary"}}
+{{> ocard title=category hsize=2 sheme="light"}}
+    <em>{{description}}</em><br>
+    Price: {{price}}
+{{> ccard}}
+{{#with features}}
+    {{> label title="Features" hsize=2 sheme="success"}}
+    {{> ocard title="Processor" hsize=3 sheme="danger"}}
+        {{#with processor}}
+            {{brand}} {{model}} {{speed}}<br>
+            Cores: {{cores}}, Cache: {{cache}}
+        {{/with}}
+    {{> ccard}}
+    {{> ocard title="Memory" hsize=3 sheme="primary"}}
+        {{#with memory}}
+            {{type}} {{size}} {{speed}}
+        {{/with}}
+    {{> ccard}}
+    {{> ocard title="Storage" hsize=3 sheme="success"}}
+        {{#with storage}}
+            {{type}} {{size}}
+        {{/with}}
+    {{> ccard}}
+    {{> ocard title="Display" hsize=3 sheme="warning"}}
+        {{#with display}}
+            Size: {{size}}, Resolution: {{resolution}}, Technology: {{technology}}, Color: {{color_space}}, Bright: {{brightness}}, Rate: {{refresh_rate}},
+        {{/with}}
+    {{> ccard}}
+    {{> ocard title="Graphics" hsize=3 sheme="warning"}}
+        {{#with graphics}}
+            {{brand}} {{model}} {{memory}}
+        {{/with}}
+    {{> ccard}}
+    {{> ocard title="Ports" hsize=3 sheme="primary"}}
+        {{#each ports}}
+            {{> ocard title=type hsize=4 sheme="primary"}}
+                {{count}}:
+                {{#each features}}
+                    {{> label title=this hsize=4 sheme="primary"}}
+                {{/each}}
+            {{> ccard}}
+        {{/each}}
+    {{> ccard}}
+    {{> ocard title="Battery" hsize=3 sheme="danger"}}
+        {{#with battery}}
+            {{type}} {{capacity}} {{life}}
+        {{/with}}
+    {{> ccard}}
+    {{> ocard title="Weight" hsize=3 sheme="info"}}
+        {{weight}}
+    {{> ccard}}
+    {{> ocard title="Operating system" hsize=3 sheme="dark"}}
+        {{operating_system}}
+    {{> ccard}}
+    {{> ocard title="Accessories" hsize=3 sheme="light"}}
+        {{#each accessories}}
+            {{> ocard title=name hsize=4 sheme="light"}}
+                Price: {{price}}
+            {{> ccard}}
+        {{/each}}
+    {{> ccard}}
+{{/with}}
