@@ -1,1 +1,11 @@
-Boo
+{{!-- 
+man👨
+woman👩
+group👬
+ --}}
+{{#each users}}
+    User: {{id}}<br>
+    {{#each groups}}
+        Group: {{id}}<br>
+    {{/each}}
+{{/each}}
