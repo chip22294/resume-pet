@@ -858,6 +858,10 @@ router.get('/mac', function (req, res) {
           price: 19.99,
         },
       ],
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 // Підключаємо роутер до бек-енду
 module.exports = router
