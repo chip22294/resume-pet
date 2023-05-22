@@ -1,0 +1,109 @@
+<header>
+    <div>
+        {{> title name=name big=true}}
+        <em>{{description}}</em>
+    </div>
+</header>
+<div>
+    <h3>Types: <span class="badge bg-secondary">
+        {{#each types}}
+            {{this}}&nbsp;
+        {{/each}}
+    </span></h3>
+</div>
+<div>
+    {{> title name="Syntax:"}}
+    {{#with syntax}}
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <span class="badge text-bg-primary">Variables</span>
+            </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                {{> slist lItems=variables}}
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <span class="badge text-bg-success">Functions</span>
+            </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                {{> slist lItems=functions}}
+            </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <span class="badge text-bg-danger">Conditionals</span>
+            </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                {{> slist lItems=conditionals}}
+            </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                <span class="badge text-bg-warning">Loops</span>
+            </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                {{> slist lItems=loops}}
+            </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+                <span class="badge text-bg-info">Classes</span>
+            </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                {{> slist lItems=classes}}
+            </div>
+            </div>
+        </div>
+    </div>
+    {{/with}}
+    <br>
+    <div>
+        {{> title name="Features:"}}
+        {{> glist gItems=features}}
+    </div>
+    <br>
+    <div>
+        {{> title name="Libraries:"}}
+        {{> linklist lItems=libraries }}
+    </div>
+    <br>
+    <div>
+        {{> title name="Tools:"}}
+        {{> linklist lItems=tools }}
+    </div>
+    <br>
+    {{> title name="Community:"}}
+    {{#each community}}
+        <h5>{{name}}: <span class="badge bg-secondary">{{type}}</span></h5>
+    {{/each}}
+</div>
+<footer>
+    <hr>
+    <div>
+        <em>
+            {{#with history}}
+                {{founder}} - {{year}}
+            {{/with}}
+        </em>
+    </div>
+</footer>
