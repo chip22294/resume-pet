@@ -9,20 +9,20 @@
         <h6><span class="badge text-bg-secondary">Friends:</span></h6>
       {{/if}}
       {{#each friends}}
-        {{> ouser}}
-        {{> cuser}}
+        {{> user}}
       {{/each}}
       {{#if mutual_friends}}
         <h6><span class="badge text-bg-warning">Mutual friends:</span></h6>
       {{/if}}
       {{#each mutual_friends}}
-        {{> ouser}}
-        {{> cuser}}
+        {{> user}}
       {{/each}}
       {{#if groups}}
         <h6><span class="badge text-bg-success">Groups:</span></h6>
       {{/if}}
       {{#each groups}}
-        {{> ogroup}}
-        {{> cgroup}}
+        {{> group}}
       {{/each}}
+    </p>
+  </div>
+</div>
