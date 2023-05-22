@@ -1,0 +1,14 @@
+<div class="card"> {{!-- style="width: 18rem;"> --}}
+  <div class="card-body">
+    <h5><span class="badge text-bg-success">
+      {{id}} 👬 {{name}}
+    </span></h5>
+    <p class="card-text">
+      <div><em>{{description}}</em></div>
+      <h6><span class="badge text-bg-warning">Members:</span></h6>
+      {{#each members}}
+        {{> user}}
+      {{/each}}
+    </p>
+  </div>
+</div>
