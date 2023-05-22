@@ -24,7 +24,7 @@ price
         {{> openbox title=make hsize=2 color="primary"}}
             {{make}} - {{model}} ({{year}})
             {{> colorsmp color=color}}
-        {{> closebox}}
+        </div>
         {{> openbox title="Features" hsize=2 color="success"}}
             {{#with features}}
             {{> openbox title="Interior" hsize=3 color="success"}}
@@ -36,7 +36,7 @@ price
                         {{#if heated}}Heated: ✔{{/if}}<br>
                         {{#if ventilated}}Ventilated: ✔{{/if}}
                     {{/with}}
-                {{> closebox}}
+                </div>
                 {{> openbox title="Dashboard" hsize=4 color="success"}}
                     {{#with dashboard}}
                         Material: {{material}}<br>
@@ -47,10 +47,10 @@ price
                                 Size: {{size}}<br>
                                 Resolution: {{resolution}}<br>
                                 {{#if touchscreen}}Touchscreen: ✔{{/if}}<br>
-                            {{> closebox}}
+                            </div>
                         {{/with}}
                     {{/with}}
-                {{> closebox}}
+                </div>
                 {{> openbox title="Audio" hsize=4 color="success"}}
                     {{#with audio}}
                         System: {{system}}<br>
@@ -59,9 +59,9 @@ price
                         {{#if bluetooth}}Bluetooth: ✔{{/if}}<br>
                         {{#if USB}}USB: ✔{{/if}}<br>
                     {{/with}}
-                {{> closebox}}
+                </div>
                 {{/with}}
-            {{> closebox}}
+            </div>
             {{> openbox title="Exterior" hsize=3 color="success"}}
                 {{#with exterior}}
                 {{> openbox title="Wheels" hsize=4 color="success"}}
@@ -70,23 +70,23 @@ price
                         Type: {{type}}<br>
                         {{> colorsmp color=color}}
                     {{/with}}
-                {{> closebox}}
+                </div>
                 {{> openbox title="Headlights" hsize=4 color="success"}}
                     {{#with headlights}}
                         Type: {{type}}<br>
                         Brightness: {{brightness}}<br>
                         {{#if automatic}}Automatic: ✔{{/if}}<br>
                     {{/with}}
-                {{> closebox}}
+                </div>
                 {{> openbox title="Sunroof" hsize=4 color="success"}}
                     {{#with sunroof}}
                         Type: {{type}}<br>
                         Size: {{size}}<br>
                         {{#if automatic}}Automatic: ✔{{/if}}<br>
                     {{/with}}
-                {{> closebox}}
+                </div>
                 {{/with}}
-            {{> closebox}}
+            </div>
             {{> openbox title="Safety" hsize=3 color="success"}}
                 {{#with safety}}
                 {{> openbox title="Airbags" hsize=4 color="success"}}
@@ -96,7 +96,7 @@ price
                         Knee: {{knee}}<br>
                         Rear: {{rear}}<br>
                     {{/with}}
-                {{> closebox}}
+                </div>
                 {{> openbox title="Assistance" hsize=4 color="success"}}
                     {{#with assistance}}
                         {{#if blind_spot_monitoring}}Blind spot monitoring: ✔{{/if}}<br>
@@ -105,11 +105,11 @@ price
                         {{#if adaptive_cruise_control}}Adaptive cruise control: ✔{{/if}}<br>
                         {{#if collision_warning}}Collision warning: ✔{{/if}}<br>
                     {{/with}}
-                {{> closebox}}
+                </div>
                 {{/with}}
-            {{> closebox}}
+            </div>
             {{/with}}
-        {{> closebox}}
+        </div>
         {{> openbox title="Engine" hsize=2 color="danger"}}
             {{#with engine}}
                 Type: {{type}}<br>
@@ -121,16 +121,16 @@ price
                         Type: {{type}}<br>
                         Gears: {{gears}}<br>
                     {{/with}}
-                {{> closebox}}
+                </div>
             {{/with}}
-        {{> closebox}}
+        </div>
         {{> openbox title="Fuel economy" hsize=2 color="warning"}}
             {{#with fuel_economy}}
                 City: {{city}}<br>
                 Highway: {{highway}}<br>
                 Combined: {{combined}}<br>
             {{/with}}
-        {{> closebox}}
+        </div>
         {{> openbox title="Price" hsize=2 color="secondary"}}
             {{#with price}}
                 Base: {{base}}<br>
@@ -141,11 +141,11 @@ price
                             Moonroof: {{moonroof}}<br>
                             Premium paint: {{premium_paint}}<br>
                         {{/with}}
-                    {{> closebox}}
+                    </div>
                 <b>Total: {{total}}</b>
             {{/with}}
-        {{> closebox}}
-    {{> closebox}}
+        </div>
+    </div>
 </main>
 
 
