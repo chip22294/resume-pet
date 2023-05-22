@@ -1,0 +1,28 @@
+<div class="card"> {{!-- style="width: 18rem;"> --}}
+  <div class="card-body">
+    <h5><span class="badge text-bg-primary">
+      {{id}} 👨 {{name}} ({{gender}})
+    </span></h5>
+    <p class="card-text">
+      <div>Age: {{age}}</div>
+      {{#if friends}}
+        <h6><span class="badge text-bg-secondary">Friends:</span></h6>
+      {{/if}}
+      {{#each friends}}
+        {{> ouser}}
+        {{> cuser}}
+      {{/each}}
+      {{#if mutual_friends}}
+        <h6><span class="badge text-bg-warning">Mutual friends:</span></h6>
+      {{/if}}
+      {{#each mutual_friends}}
+        {{> ouser}}
+        {{> cuser}}
+      {{/each}}
+      {{#if groups}}
+        <h6><span class="badge text-bg-success">Groups:</span></h6>
+      {{/if}}
+      {{#each groups}}
+        {{> ogroup}}
+        {{> cgroup}}
+      {{/each}}

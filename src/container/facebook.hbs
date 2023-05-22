@@ -1,11 +1,9 @@
-{{!-- 
-man👨
-woman👩
-group👬
- --}}
 {{#each users}}
-    User: {{id}}<br>
+    {{> ouser}}
+    {{> cuser}}
+    
     {{#each groups}}
-        Group: {{id}}<br>
+        {{> ogroup}}
+        {{> cgroup}}
     {{/each}}
 {{/each}}
