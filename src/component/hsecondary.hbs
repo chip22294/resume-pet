@@ -1,0 +1,18 @@
+{{!-- h1primary 
+title: 'JavaScript',
+text: 'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
+button_text: {
+solid: 'Open page',
+          outline: 'Add to cart',
+        },
+--}}
+<div class="card">
+    <div class="card-body">
+        <h2>{{title}}</h2>
+        <p>{{text}}</p>
+        {{#with button_text}}
+            <button class="btn btn-secondary">{{solid}}</button><br><br>
+            <button class="btn btn-outline-secondary">{{outline}}</button>
+        {{/with}}
+    </div>
+</div>
