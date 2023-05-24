@@ -1,7 +1,104 @@
-{{#with heading}}
-    Boo
-    {{#with main}}
-        Boo 2
-        {{> colcard}}
+
+{{#with navigation}}
+    <div class="row">
+        {{#each links}}
+            <a href={{href}} target="blank" class="btn btn-link col-2">{{text}}</a>
+        {{/each}}
+        {{#with button}}
+            <a href={{href}} class="btn btn-primary col-1">{{text}}</a>
+        {{/with}}
+    </div>
+{{/with}}
+{{#with header}}
+    <div class="row">
+        {{> colcard tsize=1 text=description btext=button.text blink=button.link shema="primary"}}
+    </div>
+{{/with}}
+{{#with city}}
+    <h2>{{title}}</h2>
+    <div class="row">
+        {{#each cards}}
+            {{> colcard col="col-5" tsize=3 text=description src=picture.src alt=picture.alt btext=button.text blink=button.href shema="primary"}}
+        {{/each}}
+    </div>
+{{/with}}
+{{#with winner}}
+    <h2>{{title}}</h2>
+    {{#with table}}
+        <table class="table text-bg-light">
+            <thead>
+                <tr>
+                    {{#each head}}
+                        <th>{{this}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each user}}
+                    <tr>                        
+                        <th>{{place}}</th>
+                        <td>{{name}}</td>
+                        <td>{{surname}}</td>
+                        <td>{{nickname}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
     {{/with}}
+{{/with}}
+{{#with gallery}}
+    <h2>{{title}}</h2>
+    <table class="table table-bordered">
+        {{#each cards}}
+            <tr>
+                <td>{{name}}</td>
+                {{#each items}}
+                    <td>{{this}}</td>
+                {{/each}}
+            </tr>
+        {{/each}}
+    </table>
+{{/with}}
+{{#with relaxion}}
+    <div class="display-3">{{title}}</div>
+    <div class="row g-2">
+        {{#each cards}}
+            {{> colcard col="col-5 text-bg-dark" tsize=5 text=description}}
+        {{/each}}
+    </div>
+{{/with}}
+{{#with rest}}
+    <div class="row g-2">
+        {{#each cards}}
+            {{> colcard col="col-6 text-center" hsize=6 tsize=5 text=description btext=button shema="primary"}}
+        {{/each}}
+    </div>
+{{/with}}
+{{#with proposition}}
+    <div class="display-2">{{title}}</div>
+    <div class="row g-2">
+        {{#each card}}
+                {{> colcard col="col-5 text-bg-warning" tsize=5 text=description}}
+        {{/each}}
+    </div>
+{{/with}}
+{{#with footer}}
+    <h5>{{title}}</h5>
+    <div class="row g-2">
+        {{#each navigation}}
+            <div class="col-4">
+                <a href={{href}} class="btn btn-link">{{text}}</a>
+            </div>
+        {{/each}}
+        {{#each socialMedia}}
+            <div class="col-4">
+                <a href={{link}} class="btn btn-outline-dark">{{name}}</a>
+            </div>
+        {{/each}}
+        {{#each partners}}
+            <div class="col-4">
+                <a href={{link}} class="btn btn-outline-info">{{name}}</a>
+            </div>
+        {{/each}}
+    </div>
 {{/with}}

@@ -1042,6 +1042,7 @@ router.get('/task21', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
     layout: 'basic',
+
     page: {
       title: { name: 'Task 21' },
     },
@@ -1177,6 +1178,7 @@ router.get('/task31', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
     layout: 'basic',
+
     page: {
       title: { name: 'Task 31' },
     },
