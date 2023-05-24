@@ -1,0 +1,43 @@
+<main>
+    {{#with heading}}
+        {{#with main}}
+            {{> hprimary}}
+        {{/with}}
+        <br>
+        {{#with second}}
+            {{> hsecondary}}
+        {{/with}}
+        <br>
+        {{#with subblock}}
+            {{> hsubblock}}
+        {{/with}}
+        <br>
+    {{/with}}
+    {{#with nested_display}}
+        {{> hnested hsize=1 shema="info" text=header_text}}
+    {{/with}}
+    <br>
+    {{#with paragraph}}
+        <div class="card">
+            <div class="card-body">
+                <div class="text-uppercase">{{title}}</div>
+                <div class="text-lowercase">{{text}}</div>
+                <br>
+                {{#with button}}
+                    <a class="btn btn-link" href="{{url}}" role="button">{{text}}</a>
+                {{/with}}
+                <div class="card">
+                    <div class="card-body">
+                        <ul>
+                            {{#each list_name}}
+                                <li>
+                                    <a class="btn btn-link" href="{{url}}" role="button">{{text}}</a>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/with}}
+</main>
