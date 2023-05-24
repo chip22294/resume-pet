@@ -13,7 +13,7 @@
 {{#with city}}
     <h2>{{title}}</h2>
     {{#each cards}}
-        {{> colcard col="col-5" tsize=3 text=description src=picture.src alt=picture.alt btext=button.text blink=button.href shema="primary"}}
+        {{> colcard col="col-5 m-2" tsize=3 text=description src=picture.src alt=picture.alt btext=button.text blink=button.href shema="primary"}}
     {{/each}}
 {{/with}}
 {{#with winner}}
@@ -57,14 +57,14 @@
     <div class="display-3">{{title}}</div>
 
         {{#each cards}}
-            {{> colcard col="col-5 text-bg-dark" tsize=5 text=description}}
+            {{> colcard col="col-5 text-bg-dark m-2" tsize=5 text=description}}
         {{/each}}
 
 {{/with}}
 {{#with rest}}
 
         {{#each cards}}
-            {{> colcard col="col-6 text-center" hsize=6 tsize=5 text=description btext=button shema="primary"}}
+            {{> colcard col="col-5 text-center  m-2" hsize=6 tsize=5 text=description btext=button shema="primary"}}
         {{/each}}
 
 {{/with}}
@@ -72,7 +72,7 @@
     <div class="display-2">{{title}}</div>
 
         {{#each card}}
-                {{> colcard col="col-5 text-bg-warning" tsize=5 text=description}}
+                {{> colcard col="col-5 text-bg-warning m-2" tsize=5 text=description}}
         {{/each}}
 
 {{/with}}
