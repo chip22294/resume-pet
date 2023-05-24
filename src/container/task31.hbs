@@ -1,0 +1,111 @@
+<div class="row g-3">
+{{#with navigation}}
+    {{#each links}}
+        <a href={{href}} target="blank" class="btn btn-link col-2">{{text}}</a>
+    {{/each}}
+    {{#with button}}
+        <a href={{href}} class="btn btn-primary col-1">{{text}}</a>
+    {{/with}}
+{{/with}}
+{{#with header}}
+    {{> colcard tsize=1 text=description btext=button.text blink=button.link shema="primary"}}
+{{/with}}
+{{#with city}}
+    <h2>{{title}}</h2>
+    {{#each cards}}
+        {{> colcard col="col-5 m-2" tsize=3 text=description src=picture.src alt=picture.alt btext=button.text blink=button.href shema="primary"}}
+    {{/each}}
+{{/with}}
+{{#with winner}}
+    <h2>{{title}}</h2>
+    {{#with table}}
+        <table class="table text-bg-light">
+            <thead>
+                <tr>
+                    {{#each head}}
+                        <th>{{this}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each user}}
+                    <tr>                        
+                        <th>{{place}}</th>
+                        <td>{{name}}</td>
+                        <td>{{surname}}</td>
+                        <td>{{nickname}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{/with}}
+{{/with}}
+{{#with gallery}}
+    <div>
+        <h2 class="text-title">{{title}}</h2>
+    </div>
+    <div class="row g-2">
+        {{#each cards}}
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        <p class="text-center">{{name}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        {{#each items}}
+                            <li class="text-center list-group-item">{{this}}</p>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+      {{/each}}
+    </div>
+{{/with}}
+{{#with relaxion}}
+    <div class="display-3">{{title}}</div>
+
+        {{#each cards}}
+            {{> colcard col="col-5 text-bg-dark m-2" tsize=5 text=description}}
+        {{/each}}
+
+{{/with}}
+{{#with rest}}
+
+        {{#each cards}}
+            {{> colcard col="col-5 text-center  m-2" hsize=6 tsize=5 text=description btext=button shema="primary"}}
+        {{/each}}
+
+{{/with}}
+{{#with proposition}}
+    <div class="display-2">{{title}}</div>
+
+        {{#each card}}
+                {{> colcard col="col-5 text-bg-warning m-2" tsize=5 text=description}}
+        {{/each}}
+
+{{/with}}
+{{#with footer}}
+    <h5>{{title}}</h5>
+        <div class="list-group col-3">
+            {{#each navigation}}
+                <div class="list-group-item">
+                    <a href={{href}} class="btn btn-link">{{text}}</a>
+                </div>
+            {{/each}}
+        </div>
+        <div class="list-group col-3">
+            {{#each socialMedia}}
+                <div class="list-group-item">
+                    <a href={{link}} class="btn btn-outline-dark">{{name}}</a>
+                </div>
+            {{/each}}
+        </div>
+        <div class="list-group col-3">
+            {{#each partners}}
+                <div class="list-group-item">
+                    <a href={{link}} class="btn btn-outline-info">{{name}}</a>
+                </div>
+            {{/each}}
+        </div>
+{{/with}}
+</div>

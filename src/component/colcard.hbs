@@ -1,0 +1,36 @@
+{{!-- 
+title: 'JavaScript',
+tsize
+text: 'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
+button: {
+        text: 'Learn More',
+        link: 'https://www.youtube.com/',
+
+col
+background
+btext
+blink
+shema
+header
+headercl
+hsize
+footer
+}, --}}
+<div class="card {{col}}">
+    {{#if src}}
+        <img class="card-img-top" src="{{src}}" alt="{{alt}}">
+    {{/if}}
+    {{#if header}}
+        <div class="card-header {{headercl}}">
+            <div class="display-{{hsize}}">{{header}}</div>
+        </div>
+    {{/if}}
+    <div class="card-body">
+        <h{{tsize}} class="card-title">{{title}}</h{{tsize}}>
+        <p>{{text}}</p>
+        <a href="{{blink}}" class="btn btn-{{shema}}">{{btext}}</a>
+    </div>
+    {{#if footer}}
+        <div class="card-footer text-center">{{footer}}</div>
+    {{/if}}
+</div>
