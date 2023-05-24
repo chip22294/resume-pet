@@ -1,0 +1,49 @@
+<header>
+    {{#with page_header}}
+        <div class="display-5 text-center">{{title}}</div>
+        <div class="text-center text-uppercase">{{description}}</div>
+    {{/with}}
+</header>
+<hr>
+<section>
+    {{#with section}}
+        <div>
+            {{#with about_us}}
+                {{#with title_list}}
+                    <div class="display-6 text-end">{{main}}</div>
+                    <div class="text-end"><h2>{{sub}}</h2></div>
+                {{/with}}
+                {{#with button}}
+                        {{> bootbut shema="info" outline=true}}
+                {{/with}}
+            {{/with}}
+        </div>
+        <br>
+        <div>
+            {{#with advantage}}
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-muted display-5">{{title}}</div>
+                        {{#with efficiency}}
+                            {{> bootcard titleclass="display-6 text-muted" subtitlehs=6 shema="warning" outline=true}}
+                        {{/with}}
+                        <br>
+                        {{#with innovation}}
+                            {{> bootcard titleclass="display-4 text-muted text-center" position="text-center" subtitlehs=6 shema="warning" outline=true}}
+                        {{/with}}
+                        <br>
+                        {{#with collaboration}}
+                            {{> bootcard titleclass="display-4 text-muted text-end" position="text-end" subtitlehs=6 shema="warning" outline=true}}
+                        {{/with}}
+                    </div>
+                </div>
+            {{/with}}
+        </div>
+        <br>
+        <div>
+            {{#with agreement}}
+                {{> bootcard sub_title=info.sub_title description=info.detail.text button=info.detail.button titleclass="display-5" subtitlehs=5 shema="success"}}
+            {{/with}}
+        </div>
+    {{/with}}
+</section>
