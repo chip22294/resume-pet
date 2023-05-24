@@ -41,17 +41,25 @@
     {{/with}}
 {{/with}}
 {{#with gallery}}
-    <h2>{{title}}</h2>
-    <table class="table table-bordered">
+    <div>
+        <h2 class="text-title">{{title}}</h2>
+    </div>
+    <div class="row g-2">
         {{#each cards}}
-            <tr>
-                <td>{{name}}</td>
-                {{#each items}}
-                    <td>{{this}}</td>
-                {{/each}}
-            </tr>
-        {{/each}}
-    </table>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        <p class="text-center">{{name}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        {{#each items}}
+                            <li class="text-center list-group-item">{{this}}</p>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+      {{/each}}
+    </div>
 {{/with}}
 {{#with relaxion}}
     <div class="display-3">{{title}}</div>
