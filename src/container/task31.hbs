@@ -78,20 +78,26 @@
 {{/with}}
 {{#with footer}}
     <h5>{{title}}</h5>
-        {{#each navigation}}
-            <div class="col-4">
-                <a href={{href}} class="btn btn-link">{{text}}</a>
-            </div>
-        {{/each}}
-        {{#each socialMedia}}
-            <div class="col-4">
-                <a href={{link}} class="btn btn-outline-dark">{{name}}</a>
-            </div>
-        {{/each}}
-        {{#each partners}}
-            <div class="col-4">
-                <a href={{link}} class="btn btn-outline-info">{{name}}</a>
-            </div>
-        {{/each}}
+        <div class="list-group col-3">
+            {{#each navigation}}
+                <div class="list-group-item">
+                    <a href={{href}} class="btn btn-link">{{text}}</a>
+                </div>
+            {{/each}}
+        </div>
+        <div class="list-group col-3">
+            {{#each socialMedia}}
+                <div class="list-group-item">
+                    <a href={{link}} class="btn btn-outline-dark">{{name}}</a>
+                </div>
+            {{/each}}
+        </div>
+        <div class="list-group col-3">
+            {{#each partners}}
+                <div class="list-group-item">
+                    <a href={{link}} class="btn btn-outline-info">{{name}}</a>
+                </div>
+            {{/each}}
+        </div>
 {{/with}}
 </div>
