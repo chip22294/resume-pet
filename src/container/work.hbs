@@ -7,9 +7,8 @@
                 <ul>
                     {{#each works}}
                         <li>
-                            <div>{{position}}</div>
-                            <br>
-                            <div>{{duration.from}} - {{#if duration.to}}{{duration.to}} {{else}} (still working){{/if}}</div>
+                            <div class="m-2">{{position}}</div>
+                            <div class="mt-1">{{duration.from}} - {{#if duration.to}}{{duration.to}} {{else}} (still working){{/if}}</div>
                             <br>
                             <div>
                                 {{#if company.url}}

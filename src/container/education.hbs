@@ -5,7 +5,7 @@
             {{> title name="My education" big=true}}
             <ul>
                 {{#each educations}}
-                    <li>
+                    <li class="m-3">
                         {{name}}
                         {{#unless isEnd includeZero=true}} 📙 (in studying){{/unless}}
                     </li>
@@ -17,7 +17,7 @@
             {{> title name="My certificates"}}
             <ul>
                 {{#each certificates}}
-                    <li>
+                    <li class="m-3">
                         {{name}}
                         ({{id}})
                     </li>

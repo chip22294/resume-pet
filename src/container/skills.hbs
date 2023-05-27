@@ -5,7 +5,7 @@
             {{> title name="All skills" big=true}}
             <ul>
                 {{#each skills}}
-                    <li>
+                    <li class="mx-2">
                         {{name}}
                         {{#if point includeZero=true}}({{point}}){{/if}}
                         {{#if isTop}}🎯{{/if}}
@@ -21,7 +21,7 @@
         </section>
         <section>
             {{> title name="Hobbies"}}
-            <ul>
+            <ul class="mx-2">
                 {{#each hobbies}}
                     <li>
                         {{name}}
