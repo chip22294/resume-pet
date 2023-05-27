@@ -1,0 +1,43 @@
+<div class="row g-2">
+    {{#with navigation}}
+        <div class="col-12">
+            <div class="card">
+                <div class="nav">
+                    {{#each links}}
+                        <div class="nav-item">
+                            <a href="{{href}}" class="nav-link">{{text}}</a>
+                        </div>
+                    {{/each}}
+                    <div class="nav-item">
+                        <a href="#" class="nav-link disabled">Disabled</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/with}}
+    {{#with newsBlock}}
+        <h4 class="text-center">{{title}}</h4>
+        {{#each cards}}
+            <div class="col-3">
+                <div class="card text-bg-dark">
+                    <div class="card-header">
+                        {{title}}
+                        {{#if isTop}}
+                            <span class="badge text-bg-success rounded-pill text-uppercase">new</span>
+                        {{/if}}
+                        {{#if isNew}}
+                            <span class="badge text-bg-danger rounded-pill text-uppercase">top</span>
+                        {{/if}}
+                    </div>
+                    <div class="card-body">
+                        {{description}}
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    {{/with}}
+    <hr class="col-12 my-5">
+    {{#with goodsBlock}}
+        Boo
+    {{/with}}
+</div>
