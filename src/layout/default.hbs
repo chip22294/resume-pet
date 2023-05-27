@@ -18,29 +18,27 @@
 			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
 
-  <body>
+  <body class="p-5">
 	{{#with header}}
     <header>
-        <div>
-            <h1>{{name.firstname}} {{name.lastname}} | Resume</h1>
-        </div>
-        <div>
-            <b>{{position}}</b>
-        </div>
-        <br>
-        <div>
-            <em>{{sallary}}</em>
-        </div>
-		<br>
-		<div>
-			<address>{{address}}</address>
-		</div>
-        <br>
-        <hr> 
+      <div class="mb-2">
+        <h1>{{name.firstname}} {{name.lastname}} | Resume</h1>
+      </div>
+      <div class="mb-2">
+        <b>{{position}}</b>
+      </div>
+      <div class="mb-2">
+        <em>{{sallary}}</em>
+      </div>
+      <div class="mb-2">
+        <address>{{address}}</address>
+      </div>
+      <hr class="my-5"> 
     </header>
 	{{/with}}
-
-    {{> nav}}
+    <div class="mb-5">
+      {{> nav}}
+    </div>
 
     {{{body}}}
 
