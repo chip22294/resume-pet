@@ -1,68 +1,110 @@
 <main class="p-1">
-    <div class="row g-2">
-        <div class="col-12 mb-1">
-            <div class="nav nav-tabs">
-                <div class="nav-item">
-                    <a href="#" class="nav-link active">Main</a>
-                </div>
-                <div class="nav-item">
-                    <a href="#" class="nav-link">Shop list</a>
-                </div>
-                <div class="nav-item">
-                    <a href="#" class="nav-link disabled">About</a>
-                </div>
+    <div class="row g-1">
+        <div class="col-3">
+            <div>
+                <label class="form-label">My label</label>
+                <input class="form-control">
+                <div class="form-text text-danger">You are asshole. Really !</div>
             </div>
         </div>
-        <div class="col-2">
-            <div class="card">
-                <div class="card-body">
-                    {{!-- flex-column  вертикальне меню --}}
-                    <div class="nav flex-column">
-                        <div class="nav-item">
-                            <div class="card mb-1">
-                                <a href="/summary" class="nav-link">Home page</a>
-                            </div>
-                        </div>
-                        <div class="nav-item">
-                            <div class="card mb-1">
-                                <a href="#" class="nav-link">Catalog</a>
-                            </div>
-                        </div>
-                        <div class="nav-item">
-                            <div class="card">
-                                <a href="/skills" class="nav-link disabled">FAQ</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-3">
+            <div>
+                <label class="form-label">disabled</label>
+                <input class="form-control" disabled>
+                <div class="form-text text-danger">You are asshole. Really !</div>
             </div>
         </div>
-        <div class="col-10">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="#">Home</a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="#">Appartment</a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="#">Room</a>
-                </li>
-                <li class="breadcrumb-item">
-                    Place
-                </li>
-            </ol>
-
-            <div class="row">
-                {{!-- rounded-pill  щоб кругленький був --}}
-                <div class="col-12">
-                    <h6>Hello world ! <span class="badge text-bg-success rounded-pill text-uppercase">boo</span>
-                    <span class="badge text-bg-danger rounded-pill">+</span></h6>
-                    {{!-- mb-1 m - margin mb - margin bottom --}}
-                    <button class="btn btn-primary rounded-pill m-2 ms-0">Click me</button>
-
-                    <div class="alert alert-warning">This is important information for you !</div>
-                </div>
+        <div class="col-3">
+            <div>
+                <label class="form-label">color</label>
+                <input class="form-control" type="color">
+                <div class="form-text text-danger">You are asshole. Really !</div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                <label class="form-label">form-control-lg</label>
+                <input class="form-control form-control-lg" type="color">
+                <div class="form-text text-danger">You are asshole. Really !</div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                <label class="form-label">form-control-sm</label>
+                <input class="form-control form-control-sm">
+                <div class="form-text text-danger">You are asshole. Really !</div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                <label class="form-label">form-select</label>
+                <select class="form-select text-primary">
+                    <option selected>Boo</option>
+                    <option> Boo 2</option>
+                    <option> Boo 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                <label class="form-label">form-select-lg</label>
+                <select class="form-select text-secondary form-select-lg">
+                    <option selected>Boo</option>
+                    <option> Boo 2</option>
+                    <option> Boo 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                <label class="form-label">form-select-sm</label>
+                <select class="form-select text-dark form-select-sm">
+                    <option selected>Boo</option>
+                    <option> Boo 2</option>
+                    <option> Boo 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-check">
+                <label class="form-check-label">form-check</label>
+                <input type="checkbox" class="form-check-input">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">form-check 2</label>
+                <input type="checkbox" class="form-check-input">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">form-check 3</label>
+                <input type="checkbox" class="form-check-input">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-check">
+                <label class="form-check-label">radio</label>
+                <input name="boo" type="radio" class="form-check-input">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">radio 2</label>
+                <input name="boo" type="radio" class="form-check-input">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">radio 3</label>
+                <input name="boo" type="radio" class="form-check-input">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-check form-switch">
+                <label class="form-check-label">form-switch</label>
+                <input type="checkbox" class="form-check-input">
+            </div>
+            <div class="form-check form-switch">
+                <label class="form-check-label">form-switch 2</label>
+                <input type="checkbox" class="form-check-input">
+            </div>
+            <div class="form-check form-switch">
+                <label class="form-check-label">form-switch 3</label>
+                <input type="checkbox" class="form-check-input">
             </div>
         </div>
     </div>
