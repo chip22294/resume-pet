@@ -1,0 +1,105 @@
+<div class="row">
+    <hr class="col-12 mb-3">
+    {{#with navigation}}
+        <div class="col-12 mb-4">
+            <div class="nav">
+                {{#each links}}
+                    <div class="nav-item">
+                        <a href="{{href}}" class="nav-link{{#unless href includeZero=true}} disabled{{/unless}}">{{text}}</a>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    {{/with}}
+    <h2 class="text-center mb-4">{{header}}</h2>
+    
+    <div class="col-8">
+        {{#with contacts_data}}
+            <h3 class="mb-2">{{title}}</h3>
+            <div>
+                {{#each buttons}}
+                    {{#if isPrimary}}
+                        <a href="#" class="btn btn-warning m-1">{{text}}</a>
+                    {{/if}}
+                    {{#if isOutline}}
+                        <a href="#" class="btn btn-outline-warning m-1">{{text}}</a>
+                    {{/if}}
+                {{/each}}
+            </div>
+            {{#with form}}
+                <div class="row">
+                    {{#with input}}
+                        <div class="col-6">
+                            {{#with surname}}
+                                <div>
+                                    <label class="form-label">{{label}}</label>
+                                    <input class="form-control" placeholder="{{placeholder}}">
+                                    <div class="form-text text-gray">{{caption}}</div>
+                                </div>
+                            {{/with}}
+                        </div>
+                        <div class="col-6">
+                            {{#with name}}
+                                <div>
+                                    <label class="form-label">{{label}}</label>
+                                    <input class="form-control" placeholder="{{placeholder}}">
+                                    <div class="form-text text-gray">{{caption}}</div>
+                                </div>
+                            {{/with}}
+                        </div>
+                        <div class="col-6">
+                            {{#with phone}}
+                                <div>
+                                    <label class="form-label">{{label}}</label>
+                                    <input class="form-control" placeholder="{{placeholder}}">
+                                    <div class="form-text text-gray">{{caption}}</div>
+                                </div>
+                            {{/with}}
+                        </div>
+                        <div class="col-6">
+                            {{#with email}}
+                                <div>
+                                    <label class="form-label">{{label}}</label>
+                                    <input class="form-control" placeholder="{{placeholder}}">
+                                    <div class="form-text text-gray">{{caption}}</div>
+                                </div>
+                            {{/with}}
+                        </div>
+                    {{/with}}
+                
+                </div>            
+                <hr class="my-5">
+                {{#each switch}}
+                    <div class="form-check form-switch m-3">
+                        <label class="form-check-label">{{text}}</label>
+                        <input type="checkbox" class="form-check-input"{{#if isActive}} checked{{/if}}>
+                    </div>
+                {{/each}}
+                <hr class="my-5">
+            {{/with}}
+        {{/with}}
+    </div>
+    <div class="col-4">
+        <div class="card mb-2 p-1">
+            {{#each action_block}}
+                <div>
+                    <a href="#" class="btn btn-{{#if isSuccess}}success{{/if}}{{#if isDanger}}danger{{/if}}{{#if isInfo}}info{{/if}} m-1">{{text}}</a>
+                </div>
+            {{/each}}
+        </div>
+        <div class="card mb-2 p-1">
+            Part 1
+            <hr class="mx-2">
+            Part 2
+            <hr class="mx-2">
+            Part 3
+            <hr class="mx-2">
+            <div>
+                <a href="#" class="btn btn-primary m-1">Boo</a>
+            </div>
+            <div>
+                <a href="#" class="btn btn-outline-primary m-1">Boo</a>
+            </div>
+        </div>
+    </div>
+</div>
