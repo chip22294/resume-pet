@@ -11,8 +11,7 @@
             </div>
         </div>
     {{/with}}
-    <h2 class="text-center mb-4">{{header}}</h2>
-    
+    <h2 class="text-center mb-4">{{header}}</h2>    
     <div class="col-8">
         {{#with contacts_data}}
             <h3 class="mb-2">{{title}}</h3>
@@ -66,7 +65,6 @@
                             {{/with}}
                         </div>
                     {{/with}}
-                
                 </div>            
                 <hr class="my-5">
                 {{#each switch}}
@@ -78,6 +76,51 @@
                 <hr class="my-5">
             {{/with}}
         {{/with}}
+        {{#with delivery}}
+            {{!-- Not working  --}}
+            {{!-- <div class="row"> --}}
+                {{!-- <div class="col-8"> --}}
+                    <h3 class="mb-2">{{title}}</h3>
+                    <div class="card mb-2 p-1">
+                        {{#each select}}
+                            <div class="col-5">
+                                {{!-- <div> --}}
+                                    <label class="form-label">{{label}}</label>
+                                    <select class="form-select text-secondary form-select">
+                                        <option disabled selected>{{placeholder}}</option>
+                                        {{#each options}}
+                                            <option value="{{value}}">{{text}}</option>
+                                        {{/each}}
+                                    </select>
+                                {{!-- </div> --}}
+                            </div>
+                        {{/each}}
+                    </div>
+                {{!-- </div> --}}
+            {{!-- </div> --}}
+            <div class="m-2">
+                {{#each delivery_type}}
+                    <div class="form-check">
+                        <label class="form-check-label">{{type}}</label>
+                        <input name="delivery_type" type="radio" class="form-check-input">
+                    </div>
+                {{/each}}
+            </div>
+            <hr class="my-5">
+            {{#with payment}}
+                <h3 class="mb-2">{{title}}</h3>
+                {{#each list}}
+                    <div class="form-check">
+                        <label class="form-check-label">{{type}}</label>
+                        <input name="payment_type" type="radio" class="form-check-input">
+                        {{#if description}}
+                            <div class="form-text text-gray">{{description}}</div>
+                        {{/if}}
+                    </div>
+                {{/each}}
+            {{/with}}
+            <hr class="my-5">
+        {{/with}}
     </div>
     <div class="col-4">
         <div class="card mb-2 p-1">
@@ -87,19 +130,28 @@
                 </div>
             {{/each}}
         </div>
-        <div class="card mb-2 p-1">
-            Part 1
-            <hr class="mx-2">
-            Part 2
-            <hr class="mx-2">
-            Part 3
-            <hr class="mx-2">
-            <div>
-                <a href="#" class="btn btn-primary m-1">Boo</a>
+        {{#with total}}
+            <div class="card mb-2 p-1">
+                <h3 class="mb-2">{{title}}</h3>
+                {{#each item_list}}
+                    <div class="mx-1">{{name}}: {{price}}</div>
+                {{/each}}
+                <hr class="mx-2">
+                {{#each additional_info}}
+                    <div class="mx-1">{{text}}: {{value}}</div>
+                {{/each}}
+                <hr class="mx-2">
+                {{#with total_price}}
+                    <div class="mx-1">{{text}}: {{value}}</div>
+                {{/with}}
+                <hr class="mx-2">
+                    {{#each button}}
+                        <div>
+                            {{!-- <a href="#" class="btn btn-primary m-1">Boo</a> --}}
+                            <a href="#" class="btn btn-{{#if isPrimary}}primary{{/if}}{{#if isOutline}}outline-primary{{/if}} m-1">{{text}}</a>
+                        </div>
+                    {{/each}}
             </div>
-            <div>
-                <a href="#" class="btn btn-outline-primary m-1">Boo</a>
-            </div>
-        </div>
+        {{/with}}    
     </div>
 </div>
