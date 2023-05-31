@@ -1214,7 +1214,7 @@ router.get('/task31', function (req, res) {
     },
     city: {
       title: 'City list',
-      cards: [
+      s: [
         {
           picture: {
             src: 'https://picsum.photos/400/200',
