@@ -1,0 +1,18 @@
+<div class="row g-2">
+    {{#with navigation}}
+        <div class="col-12">
+            <div class="card">
+                <div class="nav">
+                    {{#each links}}
+                        <div class="nav-item">
+                            <a href="{{href}}" class="nav-link">{{text}}</a>
+                        </div>
+                    {{/each}}
+                    <div class="nav-item">
+                        <a href="#" class="nav-link disabled">Disabled</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/with}}
+</div>
