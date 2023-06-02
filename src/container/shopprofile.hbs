@@ -1,1 +1,86 @@
-{{!-- shopprofile container --}}
+<div class="row g-2">
+    {{#with navigation}}
+        <div class="col-12">
+            <div class="card">
+                <div class="nav">
+                    {{#each links}}
+                        <div class="nav-item">
+                            <a href="{{href}}" class="nav-link">{{text}}</a>
+                        </div>
+                    {{/each}}
+                    <div class="nav-item">
+                        <a href="#" class="nav-link disabled">Disabled</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/with}}
+    <h3 class="mb-2 my-5">{{header}}</h3>
+    {{#with purchase}}
+        <ul class="nav nav-tabs">
+            {{#each tabs}}
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">{{this}}</a>
+                </li>
+            {{/each}}
+        </ul>
+        {{#with actionBlock}}
+            <div class="col-4">
+                {{#with input}}
+                    <input type="text" class="form-control" placeholder="{{placeholder}}">
+                {{/with}}
+            </div>
+            <div class="col-8">
+                {{#each buttons}}
+                    {{#if isSuccess}}
+                        <a href="#" class="btn btn-success m-1">{{text}}</a>
+                    {{/if}}
+                    {{#if isOutline}}
+                        <a href="#" class="btn btn-outline-success m-1">{{text}}</a>
+                    {{/if}}
+                    {{#if isDanger}}
+                        <a href="#" class="btn btn-danger m-1">{{text}}</a><div class="card-body row py-1"></div>
+                    {{/if}}
+                {{/each}}
+            </div>
+        {{/with}}
+        <hr class="col-12 my-2">
+        {{#each itemList}}
+            {{> purchaseItem}}
+        {{/each}}
+    {{/with}}
+    <hr class="col-12 my-5">
+    {{#with userInfo}}
+        <h3 class="mb-2 mb-5">{{title}}</h3>
+        {{#with profileData}}
+            <div class="card m-2">
+                <h5 class="card-title m-2">{{title}}</h5>
+                <div class="card m-2">
+                    <div class="card-body row py-1">
+                        {{#with fullName}}
+                            {{#with surname}}
+                                <div class="col-4 align-self-center">
+                                    {{title}}
+                                    <h5>{{value}}</h5>
+                                </div>
+                            {{/with}}
+                            {{#with name}}
+                                <div class="col-4 align-self-center">
+                                    {{title}}
+                                    <h5>{{value}}</h5>
+                                </div>
+                            {{/with}}
+                            {{#with middleName}}
+                                <div class="col-4 align-self-center">
+                                    {{title}}
+                                    <h5>{{value}}</h5>
+                                </div>
+                            {{/with}}
+                            {{!-- ! ---------------------- HERE ENDED ------------------------------ --}}
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+        {{/with}}
+    {{/with}}
+</div>

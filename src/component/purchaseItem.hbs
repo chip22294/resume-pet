@@ -1,0 +1,24 @@
+<div class="card mb-2">
+    <div class="card-body row py-1">
+        <div class="col-4 align-self-center">
+            {{number}}<br>
+            <h5 class="mt-2">{{status}}</h5>
+        </div>
+        <div class="col-2 align-self-center">
+            {{#with amount}}
+                {{title}}<br>
+                <h5 class="mt-2">{{value}}</h5>
+            {{/with}}
+        </div>
+        <div class="col-4">
+            {{#each images}}
+                <img src="{{this}}">
+            {{/each}}
+        </div>
+        <div class="col-2 align-self-center text-center">
+            {{#with button}}
+                <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+            {{/with}}
+        </div>
+    </div>
+</div>
