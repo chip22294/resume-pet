@@ -17,7 +17,6 @@
     {{/with}}
     {{#with formBlock}}
     <div class="col-8">
-        {{!-- ! main col --}}
         <h3 class="mb-2 my-5">{{header}}</h3>
         <p>
             {{#with rating}}
@@ -66,7 +65,6 @@
         <hr class="my-5">
     </div>
     <div class="col-4">
-        {{!-- ! right col --}}
         {{#with goodsInfo}}
             <div class="card mt-5 mb-2 p-2">
                 <div class="col-6 mx-3 mt-4">
@@ -101,5 +99,44 @@
             </div>
         {{/with}}
     </div>
-    {{/with}} {{!-- ? formBlock closed --}}
+    {{/with}}
+    {{#each reviewList}}
+        {{> reviewItem}}
+    {{/each}}
+    {{#with service}}
+        <div class="col-12 mt-5">
+            <div class="card text-bg-success">
+                <div class="card-body">
+                    <h2 class="card-title text-center">{{title}}</h2>
+                    <p class="text-center">{{description}}</p>
+                    <div class="text-center">
+                        {{#each buttons}}
+                            <a href="{{link}}" class="btn btn-primary mb-1">{{text}}</a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/with}}
+    <hr class="col-12 mt-5">
+    {{#each footer}}
+        <div class="col-2">
+            <div class="card">
+                <div class="nav flex-column">
+                    <div class="nav-item">
+                        <a href="{{this.[0].link}}" class="nav-link">{{this.[0].text}}</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="{{this.[1].link}}" class="nav-link">{{this.[1].text}}</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="{{this.[2].link}}" class="nav-link">{{this.[2].text}}</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="{{this.[3].link}}" class="nav-link disabled">{{this.[3].text}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
 </div>
