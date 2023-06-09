@@ -15,7 +15,6 @@
             </div>
         </div>
     {{/with}}
-    {{!-- * <li class="breadcrumb-item active" aria-current="page">Data</li>             --}}
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb my-5">        
             {{#each breadcrumb}}
@@ -36,7 +35,6 @@
             </div>
         </div>
     {{/each}}
-    {{!-- ! left side begins --}}
     {{#with filterBlock}}
         <div class="col-4">
             <div class="card m-2 p-2">
@@ -73,7 +71,6 @@
                         <a href="{{link}}" class="btn btn-outline-secondary col-2">{{text}}</a>
                     {{/with}}
                 {{/with}}
-                {{!-- <hr class="mx-2"> --}}
                 {{#each filterList}}
                     <hr class="mx-2">
                     <label class="mb-2">{{title}}</label>
@@ -87,15 +84,13 @@
             </div>
         </div>
     {{/with}}
-    {{!-- ! left side endss --}}
-    {{!-- ? right side begins --}}
     <div class="col-8" style="background-color: rgb(242, 244, 167);">
         <div class="row">
-            <div class="card col-6" style="background-color: rgb(194, 144, 241);">Card 1</div>
-            <div class="card col-6">Card 2</div>
+            {{#each goodsList}}
+                {{> catalogItem}}
+            {{/each}}
         </div>
     </div>
-    {{!-- ? right side ends --}}
     {{#with service}}
         <div class="col-12 mt-5">
             <div class="card text-bg-success">
