@@ -3274,5 +3274,113 @@ router.get('/shopcatalog', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+router.get('/index8', function (req, res) {
+  res.render('index8', {
+    layout: 'index',
+    page: {
+      title: { name: 'Resume project' },
+    },
+    name: 'Eugene',
+    surname: 'Nechyporuk',
+    title: 'Page list',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem obcaecati corporis, tenetur tempora velit perspiciatis inventore culpa eos quisquam fugiat doloremque nihil aut cumque at sed recusandae cupiditate qui eveniet?',
+    buttons: [
+      {
+        text: '',
+        link: '/bootstrap',
+      },
+      {
+        text: '',
+        link: '/car',
+      },
+      {
+        text: '',
+        link: '/education',
+      },
+      {
+        text: '',
+        link: '/error',
+      },
+      {
+        text: '',
+        link: '/facebook',
+      },
+      {
+        text: '',
+        link: '/index',
+      },
+      {
+        text: '',
+        link: '/js',
+      },
+      {
+        text: '',
+        link: '/mac',
+      },
+      {
+        text: '',
+        link: '/person',
+      },
+      {
+        text: '',
+        link: '/program',
+      },
+      {
+        text: '',
+        link: '/shopcart',
+      },
+      {
+        text: '',
+        link: '/shopcatalog',
+      },
+      {
+        text: '',
+        link: '/shophome',
+      },
+      {
+        text: '',
+        link: '/shoporder',
+      },
+      {
+        text: '',
+        link: '/shopprofile',
+      },
+      {
+        text: '',
+        link: '/shopreview',
+      },
+      {
+        text: '',
+        link: '/skills',
+      },
+      {
+        text: '',
+        link: '/summary',
+      },
+      {
+        text: '',
+        link: '/task21',
+      },
+      {
+        text: '',
+        link: '/task22',
+      },
+      {
+        text: '',
+        link: '/task31',
+      },
+      {
+        text: '',
+        link: '/web',
+      },
+      {
+        text: '',
+        link: '/work',
+      },
+    ],
+  })
+})
+
 // Підключаємо роутер до бек-енду
 module.exports = router
