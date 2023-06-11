@@ -1,9 +1,10 @@
 <div class="row">
-    <div class="col-6 fs-3">Name</div>
-    <div class="col-6 fs-3 text-end">Title</div>
+    <div class="col-6 fs-3">{{name}} {{surname}}</div>
+    <div class="col-6 fs-3 text-end">{{page.title.name}}</div>
     <hr class="mb-5">
-    <h2>Title</h2>
-    <p class="mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error incidunt id iure quibusdam nostrum libero tenetur itaque nihil minima nisi, provident quod praesentium aspernatur voluptas. Labore esse corrupti illo nobis.</p>
-    <div class="m-1"><a class="btn btn-primary" href="#" role="button">Link</a></div>
-    <div class="m-1"><a class="btn btn-primary" href="#" role="button">Link</a></div>
+    <h2>{{title}}</h2>
+    <p class="mb-5">{{description}}</p>
+    {{#each buttons}}
+        <div class="m-1 col-2"><a class="btn btn-primary text-capitalize" href="{{link}}" target="_blank" role="button">{{text}}</a></div>
+    {{/each}}
 </div>

@@ -3284,98 +3284,98 @@ router.get('/index8', function (req, res) {
     surname: 'Nechyporuk',
     title: 'Page list',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem obcaecati corporis, tenetur tempora velit perspiciatis inventore culpa eos quisquam fugiat doloremque nihil aut cumque at sed recusandae cupiditate qui eveniet?',
+      'List of pages developed in the educational project IT-Brains',
     buttons: [
       {
-        text: '',
+        text: 'bootstrap',
         link: '/bootstrap',
       },
       {
-        text: '',
+        text: 'car',
         link: '/car',
       },
       {
-        text: '',
+        text: 'education',
         link: '/education',
       },
       {
-        text: '',
+        text: 'error',
         link: '/error',
       },
       {
-        text: '',
+        text: 'facebook',
         link: '/facebook',
       },
       {
-        text: '',
+        text: 'index',
         link: '/index',
       },
       {
-        text: '',
+        text: 'js',
         link: '/js',
       },
       {
-        text: '',
+        text: 'mac',
         link: '/mac',
       },
       {
-        text: '',
+        text: 'person',
         link: '/person',
       },
       {
-        text: '',
+        text: 'program',
         link: '/program',
       },
       {
-        text: '',
+        text: 'shopcart',
         link: '/shopcart',
       },
       {
-        text: '',
+        text: 'shopcatalog',
         link: '/shopcatalog',
       },
       {
-        text: '',
+        text: 'shophome',
         link: '/shophome',
       },
       {
-        text: '',
+        text: 'shoporder',
         link: '/shoporder',
       },
       {
-        text: '',
+        text: 'shopprofile',
         link: '/shopprofile',
       },
       {
-        text: '',
+        text: 'shopreview',
         link: '/shopreview',
       },
       {
-        text: '',
+        text: 'skills',
         link: '/skills',
       },
       {
-        text: '',
+        text: 'summary',
         link: '/summary',
       },
       {
-        text: '',
+        text: 'task21',
         link: '/task21',
       },
       {
-        text: '',
+        text: 'task22',
         link: '/task22',
       },
       {
-        text: '',
+        text: 'task31',
         link: '/task31',
       },
       {
-        text: '',
+        text: 'web',
         link: '/web',
       },
       {
-        text: '',
+        text: 'work',
         link: '/work',
       },
     ],
