@@ -3,29 +3,29 @@
     <main>
         <section>
             {{> title name="All skills" big=true}}
-            <ul>
+            <ul class="list-group">
                 {{#each skills}}
-                    <li class="mx-2">
+                    <li class="list-group-item mx-2">
                         {{name}}
                         {{#if point includeZero=true}}({{point}}){{/if}}
-                        {{#if isTop}}🎯{{/if}}
-                        {{#unless point includeZero=true}} (not studying){{/unless}}
+                        {{#if isTop}}<span class="badge rounded-pill text-bg-danger">TOP</span>{{/if}}
+                        {{#unless point includeZero=true}}<span class="badge rounded-pill text-bg-dark">NOT STUDYING</span>{{/unless}}
                         {{#unless point}}
                             {{#if point includeZero=true}}
-                                📙 (in studying)
+                                <span class="badge rounded-pill text-bg-warning">STUDYING</span>
                             {{/if}}
                         {{/unless}}
                     </li>
                 {{/each}}
             </ul>
         </section>
-        <section>
+        <section class="mt-5">
             {{> title name="Hobbies"}}
-            <ul class="mx-2">
+            <ul class="list-group">
                 {{#each hobbies}}
-                    <li>
+                    <li class="list-group-item mx-2">
                         {{name}}
-                        {{#if isMain}}💖{{/if}}
+                        {{#if isMain}}<span class="badge rounded-pill text-bg-success">MAIN</span>{{/if}}
                     </li>
                 {{/each}}
             </ul>
