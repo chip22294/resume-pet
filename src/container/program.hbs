@@ -1,41 +1,43 @@
 {{#with program}}
     {{#with excursion}}
-    <div>
-    <section>
-        {{> title name=name big=true}}
-        {{date}}
-        {{> location city=location.city country=location.country}}        
-    </section>
+    <div class="m-2">
+        <section>
+            {{> title name=name big=true}}
+            {{date}}
+            {{> location city=location.city country=location.country}}        
+        </section>
     </div>
-    <div>
+    <div class="m-2">
     <section>
         {{> title name="In our program:"}}
         {{#each program}}
-            <hr style="width:50%;margin-left:0">
-            <h4>{{name}} ({{type}}, {{duration}} hours.)</h4>
-            {{!-- {{> placedetail details=details}} --}}
-            {{#with details}}
-                {{#if museum}}
-                    {{#with museum}}
-                        Museum: <b>{{name}}</b>
-                        {{> location address=location.address city=location.city country=location.country}}
-                        {{> exhibit list=exhibits}}
-                    {{/with}} 
-                {{/if}}
-                {{#if venue}}
-                    {{#with venue}}
-                        Venue: <b>{{name}}</b>
-                        {{> location address=location.address city=location.city country=location.country}}
+            <div class="card mb-2">
+                <div class="card-body">
+                    <div class="card-title fs-2">{{name}} ({{type}}, {{duration}} hours.)</div>
+                    {{#with details}}
+                        {{#if museum}}
+                            {{#with museum}}
+                                Museum: <b>{{name}}</b>
+                                {{> location address=location.address city=location.city country=location.country}}
+                                {{> exhibit list=exhibits}}
+                            {{/with}} 
+                        {{/if}}
+                        {{#if venue}}
+                            {{#with venue}}
+                                Venue: <b>{{name}}</b>
+                                {{> location address=location.address city=location.city country=location.country}}
+                            {{/with}}
+                            <div><dl>
+                                <dt><b>Performers:</b></dt>
+                                {{#each performers}}
+                                    <dd>{{name}} <em>({{type}})</em></dd>
+                                {{/each}}
+                            </dl></div>
+                        {{/if}}
+                        {{> guide item=guide}}
                     {{/with}}
-                    <div><dl>
-                        <dt><b>Performers:</b></dt>
-                        {{#each performers}}
-                            <dd>{{name}} <em>({{type}})</em></dd>
-                        {{/each}}
-                    </dl></div>
-                {{/if}}
-                {{> guide item=guide}}
-            {{/with}}
+                </div>
+            </div>
         {{/each}}
     </section>
     </div>

@@ -1,13 +1,13 @@
-<div>
+<div class="row">
     {{#with main}}
-    <main>
+    <main class="col-5">
         <section>
             {{> title name="My education" big=true}}
-            <ul>
+            <ul class="list-group">
                 {{#each educations}}
-                    <li class="m-3">
+                    <li class="list-group-item mx-2">
                         {{name}}
-                        {{#unless isEnd includeZero=true}} 📙 (in studying){{/unless}}
+                        {{#unless isEnd includeZero=true}}<span class="badge rounded-pill text-bg-warning">STUDYING</span>{{/unless}}
                     </li>
                 {{/each}}
             </ul>
@@ -15,11 +15,11 @@
         <br>
         <section>
             {{> title name="My certificates"}}
-            <ul>
+            <ul class="list-group">
                 {{#each certificates}}
-                    <li class="m-3">
+                    <li  class="list-group-item mx-2">
                         {{name}}
-                        ({{id}})
+                        <span class="badge text-bg-info">{{id}}</span>
                     </li>
                 {{/each}}
             </ul>

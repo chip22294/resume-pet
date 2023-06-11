@@ -3,7 +3,7 @@
     <dt><b>Exhibits:</b></dt>
     {{#each list}}
         <dd>
-            {{#if audio_guide}}🔊&nbsp;{{/if}}
+            {{#if audio_guide}}<span class="badge text-bg-success">Sound</span>{{/if}}
             {{this.name}}
             {{#if this.artist}}
              - {{this.artist}}

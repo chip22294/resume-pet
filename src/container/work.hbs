@@ -1,12 +1,12 @@
-<div>
+<div class="row">
 	{{#with main}}
-    <main>
+    <main class="col-6">
         <section>
             {{> title name="Work history" big=true}}
             <div>
-                <ul>
+                <ul class="list-group">
                     {{#each works}}
-                        <li>
+                        <li class="list-group-item mx-2">
                             <div class="m-2">{{position}}</div>
                             <div class="mt-1">{{duration.from}} - {{#if duration.to}}{{duration.to}} {{else}} (still working){{/if}}</div>
                             <br>
@@ -21,26 +21,26 @@
                             <br>
                             <div><strong>Projects ({{projectAmount}})</strong></div>
                             <br>
-                            <ul>
+                            <ul class="list-group">
                                 {{#each projects}}
-                                <li>
+                                <li class="list-group-item mx-2">
                                     <div>{{> link href=url text=name blank=true woLine=true}}</div>
                                     <br>
                                     <div><p>{{about}}</p></div>
                                     <br>
                                     <em>Project stacks ({{stackAmount}})</em>
-                                    <ul>
+                                    <ul class="list-group">
                                         {{#each stacks}}
-                                        <li>
+                                        <li class="list-group-item mx-2">
                                             {{name}}
                                         </li>
                                         {{/each}}
                                     </ul>
                                     <br>
                                     <em>Project awards:</em>
-                                    <ul>
+                                    <ul class="list-group">
                                         {{#each awards}}
-                                        <li>
+                                        <li class="list-group-item mx-2">
                                             {{name}}
                                         </li>
                                         {{/each}}

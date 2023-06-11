@@ -1,5 +1,5 @@
 {{#with person}}
-<div>
+<div class="m-2">
     <section>
         {{> title name=name big=true}}
         <div>
@@ -14,7 +14,7 @@
         </div>
     </section>
 </div>
-<div>
+<div class="m-2">
     <section>
         {{> title name="Education"}}
         <ul>
@@ -30,7 +30,7 @@
         </ul>
     </section>
 </div>
-<div>
+<div class="m-2">
     <section>
         {{> title name="Work experience:"}}
         {{#each workExperience}}
@@ -42,10 +42,10 @@
             {{/each}}
         </dl>
         <hr>
-        <div>
+        <div class="col-6">
         {{> title name="Employees:"}}
             {{#each employees}}
-                <h4>{{name}} ({{position}}, {{department}})</h4>                
+                <h4 class="mt-3">{{name}} ({{position}}, {{department}})</h4>                
                 <dl>
                     <dt><h5>Projects:</h5></dt>
                     {{#each projects}}
@@ -57,19 +57,19 @@
                             {{#each teams}}
                                 <dd>
                                     <h5>{{team_name}} ({{> member name=team_leader.name title=team_leader.title email=team_leader.email}})</h5>
-                                    <ul>
+                                    <ul class="list-group">
                                     {{#each team_members}}
-                                        <li>
+                                        <li class="list-group-item mx-2">
                                             {{> member name=name title=title email=email skills=skills}}
                                             <dl>
                                                 <dt><h5>Projects:</h5></dt>
                                                 {{#each projects}}
                                                     <dd>
                                                         {{> project}}
-                                                        <h5>Members:</h5>
-                                                        <ul>
+                                                        <h5 class="my-3">Members:</h5>
+                                                        <ul class="list-group">
                                                         {{#each team_members}}
-                                                            <li>
+                                                            <li class="list-group-item mx-2">
                                                                 <h5>{{> member}}</h5>
                                                             </li>
                                                         {{/each}}
