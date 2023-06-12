@@ -2,21 +2,25 @@
 	{{#with main}}
     <main>
         <section class="mb-5">
-            {{!-- {{> title data=summary.title}} --}}
-            {{> title name=summary.title big=true}}
-            <div>
-                <p>
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        {{> title name=summary.title big=true}}
+                    </div>
                     {{summary.text}}
-                </p>
+                </div>
             </div>
         </section>
 
         <section>
-            {{> title name=otherexp.title}}
-            <div>
-                <p>
+            
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        {{> title name=otherexp.title}}
+                    </div>
                     {{otherexp.text}}
-                </p>
+                </div>
             </div>
         </section>
     </main>

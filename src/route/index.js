@@ -32,16 +32,13 @@ var footer = {
 }
 // ================================================================
 
-// router.get Створює нам один ентпоїнт
+// //           ↙ тут вводимо шлях (PATH) до сторінки
+// router.get('/', function (req, res) {
 
-//           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
+//   //            ↙ cюди вводимо назву файлу з сontainer
+//   res.render('index', {})
+//   //                  ↑↑ сюди вводимо JSON дані
+// })
 
 // ================================================================
 
@@ -3272,6 +3269,114 @@ router.get('/shopcatalog', function (req, res) {
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
+})
+
+router.get('/', function (req, res) {
+  res.render('index', {
+    layout: 'index',
+    page: {
+      title: { name: 'Resume project' },
+    },
+    name: 'Eugene',
+    surname: 'Nechyporuk',
+    title: 'Page list',
+    description:
+      'List of pages developed in the educational project IT-Brains',
+    buttons: [
+      {
+        text: 'bootstrap',
+        link: '/bootstrap',
+      },
+      {
+        text: 'car',
+        link: '/car',
+      },
+      {
+        text: 'education',
+        link: '/education',
+      },
+      {
+        text: 'error',
+        link: '/error',
+      },
+      {
+        text: 'facebook',
+        link: '/facebook',
+      },
+      {
+        text: 'index',
+        link: '/index',
+      },
+      {
+        text: 'js',
+        link: '/js',
+      },
+      {
+        text: 'mac',
+        link: '/mac',
+      },
+      {
+        text: 'person',
+        link: '/person',
+      },
+      {
+        text: 'program',
+        link: '/program',
+      },
+      {
+        text: 'shopcart',
+        link: '/shopcart',
+      },
+      {
+        text: 'shopcatalog',
+        link: '/shopcatalog',
+      },
+      {
+        text: 'shophome',
+        link: '/shophome',
+      },
+      {
+        text: 'shoporder',
+        link: '/shoporder',
+      },
+      {
+        text: 'shopprofile',
+        link: '/shopprofile',
+      },
+      {
+        text: 'shopreview',
+        link: '/shopreview',
+      },
+      {
+        text: 'skills',
+        link: '/skills',
+      },
+      {
+        text: 'summary',
+        link: '/summary',
+      },
+      {
+        text: 'task21',
+        link: '/task21',
+      },
+      {
+        text: 'task22',
+        link: '/task22',
+      },
+      {
+        text: 'task31',
+        link: '/task31',
+      },
+      {
+        text: 'web',
+        link: '/web',
+      },
+      {
+        text: 'work',
+        link: '/work',
+      },
+    ],
+  })
 })
 
 // Підключаємо роутер до бек-енду
